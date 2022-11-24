@@ -1,24 +1,16 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-
+import Button from "./component/button";
+import { SizeEnum } from "./component/button";
+import { TypeEnum } from "./component/button";
 function App() {
+
+  const handleChnage = () => {
+    console.log("hi")
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Button size={SizeEnum.Large} type={TypeEnum.Base} children={"Button"} />
+      <Button size={SizeEnum.Large} type={TypeEnum.Question} onClick={handleChnage} children={"Button"} />
     </div>
   );
 }
